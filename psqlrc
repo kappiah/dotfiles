@@ -1,0 +1,9 @@
+\set PROMPT1 '%[%033[1;33;40m%] %n@%/%R%[%033[0m%]%# '
+\set PROMPT2 '[MORE] %R > '
+
+\pset null '[NULL]'
+\x auto
+\set HISTFILE ~/.psql_history- :DBNAME
+\set COMP_KEYWORD_CASE upper
+\pset pager 
+\timing
