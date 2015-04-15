@@ -24,7 +24,7 @@ alias 'v'='vim'
 alias 'fst'='foreman start'
 alias 'pst'='passenger start'
 alias 'vup'='vagrant up --provider=vmware_fusion'
-alias 'vimup'='vim +PluginInstall! +qall'
+alias 'vimup'='vim +PlugUpdate +qall'
 alias 'script/console'='script/console --irb=pry'
 alias 'npm'='noglob npm'
 

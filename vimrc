@@ -3,9 +3,37 @@
 set nocompatible
 set encoding=utf-8
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Plugin 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
+Plug 'dockyard/vim-easydir'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
+Plug 'Keithbsmiley/investigate.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'kana/vim-textobj-user'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'elixir-lang/vim-elixir'
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-rake'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'mattn/emmet-vim'
+Plug 'gabebw/vim-spec-runner'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'chriskempson/base16-vim'
+call plug#end()
+
 set shell=/bin/sh
 
 let mapleader="\<space>"
@@ -15,46 +43,27 @@ set cursorline
 set cursorcolumn
 set colorcolumn=80
 
-Plugin 'dockyard/vim-easydir'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-
 "NerdTree config
 let NERDTreeShowHidden=1
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
 let g:airline_powerline_fonts=1
 let g:bufferline_echo=0
 set laststatus=2
 
-Plugin 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
 nnoremap <leader>K :call investigate#Investigate()<CR>
 
 "Git plugins
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_enabled = 1
 let g:gitgutter_realtime = 0
 
 "Script tools
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-rake'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mattn/emmet-vim'
 let g:go_disable_autoinstall = 1
 let g:mustache_abbreviations = 1
 
 "Test runners
-Plugin 'gabebw/vim-spec-runner'
-Plugin 'christoomey/vim-tmux-runner'
-
 nnoremap <Leader>va :VtrAttachToPane<CR>
 let g:spec_runner_dispatcher = "VtrSendCommand! {command}"
 
@@ -65,20 +74,8 @@ map <Leader>l <Plug>RunMostRecentSpec<CR>
 nnoremap <Leader>fr :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
 
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-commentary'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'kana/vim-textobj-user'
-Plugin 'christoomey/vim-tmux-navigator'
-
 "Colors
 set t_Co=256
-Plugin 'chriskempson/base16-vim'
 let base16colorspace=256
 colorscheme base16-monokai
 set bg=dark
