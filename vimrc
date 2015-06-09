@@ -126,7 +126,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set list
-set listchars=trail:·,eol:¬,tab:▸\
+set listchars=trail:·,tab:▸\ ,eol:¬
 
 let g:nerdtree_tabs_open_on_gui_startup=0
 nmap <leader>ne :NERDTree<cr>
