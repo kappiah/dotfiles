@@ -71,7 +71,7 @@ map <Leader>t <Plug>RunCurrentSpecFile<CR>
 map <Leader>f <Plug>RunFocusedSpec<CR>
 map <Leader>l <Plug>RunMostRecentSpec<CR>
 
-nnoremap <Leader>fr :VtrFocusRunner<CR>
+nnoremap <Leader>z :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
 
 "Colors
