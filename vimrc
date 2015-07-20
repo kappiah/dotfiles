@@ -66,11 +66,12 @@ let g:mustache_abbreviations = 1
 "Test runners
 nnoremap <Leader>va :VtrAttachToPane<CR>
 let g:spec_runner_dispatcher = "VtrSendCommand! {command}"
+command! RunAllSpecs VtrSendCommandToRunner! rspec spec
 
 map <Leader>t <Plug>RunCurrentSpecFile<CR>
 map <Leader>f <Plug>RunFocusedSpec<CR>
 map <Leader>l <Plug>RunMostRecentSpec<CR>
-
+map <Leader>a :RunAllSpecs<CR>
 nnoremap <Leader>z :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
 
