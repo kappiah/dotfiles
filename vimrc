@@ -100,6 +100,7 @@ set timeout timeoutlen=500
 imap <C-q> <ESC>
 
 "Keystoke reductions
+nmap 0 ^
 map <C-s> <ESC>:w<CR>
 imap <C-s> <ESC>:w<CR>
 map <silent> <leader>re :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
