@@ -6,7 +6,6 @@ set encoding=utf-8
 call plug#begin('~/.vim/plugged')
 Plug 'dockyard/vim-easydir'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'Keithbsmiley/investigate.vim'
@@ -42,11 +41,6 @@ set ruler
 set cursorline
 set cursorcolumn
 set colorcolumn=80
-
-"NerdTree config
-let NERDTreeShowHidden=1
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
 
 let g:airline_powerline_fonts=1
 let g:bufferline_echo=0
@@ -129,9 +123,6 @@ set smartcase
 set hlsearch
 set list
 set listchars=trail:·,tab:▸\ ,eol:¬
-
-let g:nerdtree_tabs_open_on_gui_startup=0
-nmap <leader>ne :NERDTree<cr>
 
 filetype plugin indent on
 autocmd FileType gitcommit setlocal spell
