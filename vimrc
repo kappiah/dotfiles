@@ -5,10 +5,9 @@ set encoding=utf-8
 
 call plug#begin('~/.vim/plugged')
 Plug 'dockyard/vim-easydir'
-Plug 'rking/ag.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'bling/vim-bufferline'
-Plug 'Keithbsmiley/investigate.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
@@ -42,12 +41,13 @@ set cursorline
 set cursorcolumn
 set colorcolumn=80
 
+"Disable ctrlp cache & use ag directly
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
 let g:airline_powerline_fonts=1
 let g:bufferline_echo=0
 set laststatus=2
-
-let g:investigate_use_dash=1
-nnoremap <leader>K :call investigate#Investigate()<CR>
 
 "Git plugins
 let g:gitgutter_enabled = 1
