@@ -39,7 +39,7 @@ let mapleader="\<space>"
 set ruler
 set cursorline
 set cursorcolumn
-set colorcolumn=80
+set colorcolumn=100
 
 "Disable ctrlp cache & use ag directly
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
