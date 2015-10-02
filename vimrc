@@ -34,6 +34,7 @@ call plug#end()
 
 set shell=/bin/sh
 
+inoremap jk <ESC>
 let mapleader="\<space>"
 
 set ruler
