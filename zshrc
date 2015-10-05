@@ -27,6 +27,7 @@ alias 'vup'='vagrant up --provider=vmware_fusion'
 alias 'vimup'='vim +PlugUpdate +qall'
 alias 'script/console'='script/console --irb=pry'
 alias 'npm'='noglob npm'
+alias 'spt'='bin/spring stop'
 
 #avoid 'unknown terminal type' errors in ssh via tmux
 alias 'ssh'='TERM=xterm ssh'
