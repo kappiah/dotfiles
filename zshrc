@@ -28,6 +28,8 @@ alias 'vimup'='vim +PlugUpdate +qall'
 alias 'script/console'='script/console --irb=pry'
 alias 'npm'='noglob npm'
 alias 'spt'='bin/spring stop'
+alias 'ips'='iex -S mix phoenix.server'
+alias 'ism'='iex -S mix'
 
 #avoid 'unknown terminal type' errors in ssh via tmux
 alias 'ssh'='TERM=xterm ssh'
