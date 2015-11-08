@@ -23,7 +23,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'elixir-lang/vim-elixir'
-Plug 'fatih/vim-go'
 Plug 'tpope/vim-rake'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
@@ -55,7 +54,6 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_realtime = 0
 
 "Script tools
-let g:go_disable_autoinstall = 1
 let g:mustache_abbreviations = 1
 
 "Test runners
