@@ -29,6 +29,7 @@ Plug 'mattn/emmet-vim'
 Plug 'gabebw/vim-spec-runner'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'chriskempson/base16-vim'
+Plug 'stefanoverna/vim-i18n'
 call plug#end()
 
 set shell=/bin/sh
@@ -54,6 +55,8 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_realtime = 0
 
 "Script tools
+vmap <Leader>z :call I18nTranslateString()<CR>
+vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 let g:mustache_abbreviations = 1
 
 "Test runners
