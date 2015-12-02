@@ -45,6 +45,13 @@ Thumbs.db
 
 # Elixir #
 ##########
-/ebin
-/deps
+ebin
+deps
 erl_crash.dump
+_build/
+deps/
+priv/
+
+# NPM #
+#######
+node_modules/
