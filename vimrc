@@ -28,6 +28,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 Plug 'gabebw/vim-spec-runner'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'christoomey/vim-conflicted'
 Plug 'chriskempson/base16-vim'
 Plug 'stefanoverna/vim-i18n'
 call plug#end()

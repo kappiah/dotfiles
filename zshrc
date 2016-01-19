@@ -16,6 +16,10 @@ fi
 
 stty -ixon
 
+conflicted() {
+  vim +Conflicted
+}
+
 alias 'gst'='git status'
 alias 'gup'='git smart-pull'
 alias 'gsm'='git smart-merge'
