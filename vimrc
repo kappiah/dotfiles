@@ -6,7 +6,8 @@ set encoding=utf-8
 call plug#begin('~/.vim/plugged')
 Plug 'dockyard/vim-easydir'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
