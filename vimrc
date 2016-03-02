@@ -49,6 +49,7 @@ let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 let g:airline_powerline_fonts=1
+let g:airline_theme='base16'
 let g:bufferline_echo=0
 set laststatus=2
 
