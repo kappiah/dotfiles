@@ -25,7 +25,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-rake'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'gabebw/vim-spec-runner'
 Plug 'christoomey/vim-tmux-runner'
@@ -61,6 +62,7 @@ let g:gitgutter_realtime = 0
 vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 let g:mustache_abbreviations = 1
+let g:jsx_ext_required = 0
 
 "Test runners
 nnoremap <Leader>va :VtrAttachToPane<CR>
