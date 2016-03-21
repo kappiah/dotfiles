@@ -120,6 +120,7 @@ nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gw :Gwrite<CR>
+"Skip to next merge conflict marker
 nmap <silent> <leader>gf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 set backspace=indent,eol,start " allow backspacing over everything
