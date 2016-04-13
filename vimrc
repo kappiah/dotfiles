@@ -76,6 +76,7 @@ command! RunAllSpecs VtrSendCommandToRunner! rspec spec
 command! RunSpecDocumenation VtrSendCommandToRunner! rspec spec --format documentation
 command! RunFailedSpecs VtrSendCommandToRunner! rspec spec --only-failures
 command! RunMixTest VtrSendCommandToRunner! mix test
+command! RunGoTest VtrSendCommandToRunner! go test
 
 map <Leader>t <Plug>RunCurrentSpecFile<CR>
 map <Leader>f <Plug>RunFocusedSpec<CR>
@@ -84,6 +85,7 @@ map <Leader>a :RunAllSpecs<CR>
 map <Leader>sd :RunSpecDocumenation<CR>
 map <Leader>q :RunFailedSpecs<CR>
 map <Leader>e :RunMixTest<CR>
+map <Leader>gt :RunGoTest<CR>
 nnoremap <Leader>z :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
 
