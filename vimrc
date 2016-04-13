@@ -27,6 +27,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'elixir-lang/vim-elixir'
+Plug 'fatih/vim-go'
 Plug 'tpope/vim-rake'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
@@ -64,6 +65,7 @@ let g:gitgutter_realtime = 0
 "Script tools
 vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>dt :call I18nDisplayTranslation()<CR>
+let g:go_disable_autoinstall = 1
 let g:mustache_abbreviations = 1
 let g:jsx_ext_required = 0
 
