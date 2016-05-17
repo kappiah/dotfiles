@@ -34,6 +34,7 @@ alias 'npm'='noglob npm'
 alias 'spt'='bin/spring stop'
 alias 'ips'='iex -S mix phoenix.server'
 alias 'ism'='iex -S mix'
+alias 'git'='hub'
 
 #avoid 'unknown terminal type' errors in ssh via tmux
 alias 'ssh'='TERM=xterm ssh'
