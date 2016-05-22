@@ -22,6 +22,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
+Plug 'kchmck/vim-coffee-script'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-sort-motion'
 Plug 'vim-ruby/vim-ruby'
@@ -147,6 +148,9 @@ set listchars=trail:·,tab:▸\ ,eol:¬
 
 filetype plugin indent on
 autocmd FileType gitcommit setlocal spell
+
+"Use coffeescript syntax hughtlight with cjsx files
+au BufRead,BufNewFile *.cjsx setfiletype coffee
 
 autocmd VimResized * :wincmd =
 
