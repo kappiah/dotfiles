@@ -7,3 +7,5 @@
 	autosquash = true
 [include]
 	path = ~/.gitconfig.local
+[diff]
+	compactionHeuristic = true
