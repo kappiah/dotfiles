@@ -35,6 +35,7 @@ alias 'spt'='bin/spring stop'
 alias 'ips'='iex -S mix phoenix.server'
 alias 'ism'='iex -S mix'
 alias 'git'='hub'
+alias 'git-cleanup'='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 #avoid 'unknown terminal type' errors in ssh via tmux
 alias 'ssh'='TERM=xterm ssh'
