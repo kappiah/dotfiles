@@ -89,6 +89,7 @@ map <Leader>e :RunMixTest<CR>
 map <Leader>gt :RunGoTest<CR>
 nnoremap <Leader>z :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
+nnoremap <leader>rc :VtrOpenRunner {'orientation': 'v', 'percentage': 20, 'cmd': 'rubocop'}<CR>
 
 "Colors
 set t_Co=256
