@@ -1,14 +1,14 @@
-##Install homebrew
+## Install homebrew
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-##Install rvm
+## Install rvm
 ```
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-##Install zprezto
+## Install zprezto
 ```
 git clone --recursive https://github.com/kappiah/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
@@ -22,7 +22,7 @@ chsh -s /usr/local/bin/zsh
 checkout 'personal' branch in ~/.zprezto
 ```
 
-###Updating zprezto
+### Updating zprezto
 
 **On master**:
 
@@ -42,7 +42,7 @@ git submodule update --init --recursive
 git rebase master
   ```
 
-##Link dotfiles via rcm
+## Link dotfiles via rcm
 ```
 rcup
 ```
