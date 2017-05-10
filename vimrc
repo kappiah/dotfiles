@@ -69,6 +69,7 @@ vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 let g:go_disable_autoinstall = 1
 let g:mustache_abbreviations = 1
 let g:jsx_ext_required = 0
+let g:elm_setup_keybindings = 0
 
 "Test runners
 nnoremap <Leader>va :VtrAttachToPane<CR>
