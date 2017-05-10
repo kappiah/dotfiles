@@ -152,7 +152,7 @@ filetype plugin indent on
 autocmd FileType gitcommit setlocal spell
 autocmd Filetype elm setlocal shiftwidth=4 softtabstop=4
 
-"Use coffeescript syntax hughtlight with cjsx files
+"Use coffeescript syntax hightlight with cjsx files
 au BufRead,BufNewFile *.cjsx setfiletype coffee
 
 autocmd VimResized * :wincmd =
