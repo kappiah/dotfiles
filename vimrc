@@ -26,7 +26,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-sort-motion'
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'tpope/vim-rake'
@@ -36,8 +36,7 @@ Plug 'mattn/emmet-vim'
 Plug 'gabebw/vim-spec-runner'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-conflicted'
-Plug 'danielwe/base16-vim'
-" Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'stefanoverna/vim-i18n'
 call plug#end()
 
@@ -78,6 +77,7 @@ let g:spec_runner_dispatcher = "VtrSendCommand! {command}"
 command! RunAllSpecs VtrSendCommandToRunner! rspec spec
 command! RunSpecDocumenation VtrSendCommandToRunner! rspec spec --format documentation
 command! RunFailedSpecs VtrSendCommandToRunner! rspec spec --only-failures
+command! RunMixTestTrace VtrSendCommandToRunner! iex -S mix test --trace
 command! RunMixTest VtrSendCommandToRunner! mix test
 command! RunGoTest VtrSendCommandToRunner! go test
 
@@ -88,6 +88,7 @@ map <Leader>a :RunAllSpecs<CR>
 map <Leader>sd :RunSpecDocumenation<CR>
 map <Leader>q :RunFailedSpecs<CR>
 map <Leader>e :RunMixTest<CR>
+map <Leader>et :RunMixTestTrace<CR>
 map <Leader>gt :RunGoTest<CR>
 nnoremap <Leader>z :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
@@ -151,7 +152,7 @@ set listchars=trail:·,tab:▸\ ,eol:¬
 
 filetype plugin indent on
 autocmd FileType gitcommit setlocal spell
-autocmd Filetype elm setlocal shiftwidth=4 softtabstop=4
+" autocmd Filetype elm setlocal shiftwidth=4 softtabstop=4
 
 "Use coffeescript syntax hightlight with cjsx files
 au BufRead,BufNewFile *.cjsx setfiletype coffee
