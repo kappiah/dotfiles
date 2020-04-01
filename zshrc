@@ -47,7 +47,8 @@ alias 'ssh'='TERM=xterm ssh'
 #Hack workaround to load gemset on new tmux pane
 cd .
 
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+. "$(brew --prefix asdf)/asdf.sh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
