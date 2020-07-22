@@ -2,6 +2,7 @@
 
 set nocompatible
 set encoding=utf-8
+runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
 Plug 'dockyard/vim-easydir'
@@ -22,7 +23,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
-Plug 'kchmck/vim-coffee-script'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-sort-motion'
 Plug 'vim-ruby/vim-ruby'
@@ -33,7 +33,7 @@ Plug 'tpope/vim-rake'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
-Plug 'gabebw/vim-spec-runner'
+Plug 'vim-test/vim-test'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-conflicted'
 Plug 'chriskempson/base16-vim'
@@ -70,29 +70,44 @@ let g:go_disable_autoinstall = 1
 let g:mustache_abbreviations = 1
 let g:jsx_ext_required = 0
 let g:elm_setup_keybindings = 0
+map <leader>m irequire IEx; IEx.pry<ESC>
 
 "Test runners
+let test#strategy = "vtr"
+" function! ElixirUmbrellaTransform(cmd) abort
+"   if match(a:cmd, 'apps/') != -1
+"     return substitute(a:cmd, 'mix test apps/\([^/]*\)/', 'mix cmd --app \1 iex -S mix test --color ', '')
+"   else
+"     return substitute(a:cmd, 'mix test', 'iex -S mix test --color ', '')
+"   end
+" endfunction
+function! ElixirUmbrellaTransform(cmd) abort
+  if match(a:cmd, 'apps/') != -1
+    return substitute(a:cmd, 'mix test apps/\([^/]*\)/', 'mix cmd --app \1 mix test --color ', '')
+  else
+    return substitute(a:cmd, 'mix test', 'mix test --color ', '')
+  end
+endfunction
+
+let g:test#custom_transformations = {'elixir_umbrella': function('ElixirUmbrellaTransform')}
+let g:test#transformation = 'elixir_umbrella'
 nnoremap <Leader>va :VtrAttachToPane<CR>
-let g:spec_runner_dispatcher = "VtrSendCommand! {command}"
 command! RunAllSpecs VtrSendCommandToRunner! rspec spec
 command! RunSpecDocumenation VtrSendCommandToRunner! rspec spec --format documentation
 command! RunFailedSpecs VtrSendCommandToRunner! rspec spec --only-failures
-command! RunMixTestTrace VtrSendCommandToRunner! iex -S mix test --trace
-command! RunMixTest VtrSendCommandToRunner! mix test
-command! RunGoTest VtrSendCommandToRunner! go test
+command! RunWithoutFeatures VtrSendCommandToRunner! rspec --exclude-pattern 'spec/features/**/*_spec.rb'
+command! RunCops VtrSendCommandToRunner! rubocop --parallel
 
-map <Leader>t <Plug>RunCurrentSpecFile<CR>
-map <Leader>f <Plug>RunFocusedSpec<CR>
-map <Leader>l <Plug>RunMostRecentSpec<CR>
+map <Leader>t :TestFile<CR>
+map <Leader>f :TestNearest<CR>
+map <Leader>l :TestLast<CR>
 map <Leader>a :RunAllSpecs<CR>
+map <Leader>wf :RunWithoutFeatures<CR>
 map <Leader>sd :RunSpecDocumenation<CR>
 map <Leader>q :RunFailedSpecs<CR>
-map <Leader>e :RunMixTest<CR>
-map <Leader>et :RunMixTestTrace<CR>
-map <Leader>gt :RunGoTest<CR>
+map <Leader>rr :RunCops<CR>
 nnoremap <Leader>z :VtrFocusRunner<CR>
 nnoremap <leader>p :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<CR>
-nnoremap <leader>rc :VtrOpenRunner {'orientation': 'v', 'percentage': 20, 'cmd': 'rubocop'}<CR>
 
 "Colors
 set t_Co=256
