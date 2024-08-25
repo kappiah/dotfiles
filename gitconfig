@@ -11,3 +11,5 @@
 	compactionHeuristic = true
 [alias]
 	freshness = "!f() { git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:cyan)%(refname:short)%(color:reset) | %(committerdate:relative)%(color:reset) | %(subject)' | column -s '|' -t; }; f"
+[init]
+	defaultBranch = main

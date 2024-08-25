@@ -26,9 +26,8 @@ Plug 'kana/vim-textobj-indent'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-sort-motion'
 Plug 'vim-ruby/vim-ruby'
-" Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 Plug 'elixir-lang/vim-elixir'
-Plug 'elmcast/elm-vim'
 Plug 'tpope/vim-rake'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
@@ -37,7 +36,7 @@ Plug 'vim-test/vim-test'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-conflicted'
 Plug 'chriskempson/base16-vim'
-Plug 'stefanoverna/vim-i18n'
+" Plug 'stefanoverna/vim-i18n'
 call plug#end()
 
 set shell=/bin/sh
@@ -142,9 +141,9 @@ autocmd FileType eruby let b:surround_45 = "<% \r %>" "surround with yss-
 autocmd FileType eruby let b:surround_61 = "<%= \r %>" "Surround with yss=
 
 "Git mappings
-nmap <leader>gb :Gblame<CR>
-nmap <leader>gs :Gstatus<CR>
-nmap <leader>gc :Gcommit<CR>
+nmap <leader>gb :Git blame<CR>
+nmap <leader>gs :Git<CR>
+nmap <leader>gc :Git commit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gw :Gwrite<CR>
 "Skip to next merge conflict marker
