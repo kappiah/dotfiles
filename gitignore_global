@@ -42,6 +42,9 @@ Thumbs.db
 .idea/
 .powrc
 .powenv
+.envrc
+.ruby-gemset
+.tool-versions
 
 # Elixir #
 ##########

@@ -38,7 +38,7 @@ alias 'spt'='bin/spring stop'
 alias 'ips'='iex -S mix phx.server'
 alias 'ism'='iex -S mix'
 alias 'cop'='rubocop --parallel'
-alias 'git-cleanup'='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias 'git-cleanup'='git branch --merged | egrep -v "(^\*|main|master|dev|develop)" | xargs git branch -d'
 alias 'jmalloc-server'='DYLD_INSERT_LIBRARIES=/usr/local/Cellar/jemalloc/5.2.1_1/lib/libjemalloc.dylib ost'
 alias 'tcmalloc-server'='DYLD_INSERT_LIBRARIES=/usr/local/Cellar/gperftools/2.8/lib/libtcmalloc.dylib ost'
 alias 'perf-server'='SECRET_KEY_BASE=foobar RAILS_ENV=perftest PUMA_WORKERS=2 ost'
@@ -54,13 +54,16 @@ alias 'ssh'='TERM=xterm ssh'
 cd .
 
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-export ASDF_DIR='/usr/local/opt/asdf/libexec'
-. "$(brew --prefix asdf)/libexec/asdf.sh"
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/15/bin:$PATH"
 # export PATH="/Applications/Postgres.app/Contents/Versions/16/bin:$PATH"
+export PATH="/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export CFLAGS="-O2 -g -fno-stack-check -Wno-error=implicit-function-declaration"
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
 export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl)"
+
+export GPG_TTY=$(tty)
