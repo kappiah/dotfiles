@@ -54,12 +54,12 @@ alias 'ssh'='TERM=xterm ssh'
 cd .
 
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# export ASDF_DATA_DIR="$HOME/.asdf"
+# export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+eval "$(mise activate zsh)"
 
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/Versions/15/bin:$PATH"
-# export PATH="/Applications/Postgres.app/Contents/Versions/16/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/17/bin:$PATH"
 export PATH="/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export CFLAGS="-O2 -g -fno-stack-check -Wno-error=implicit-function-declaration"
